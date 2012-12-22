@@ -1,0 +1,12 @@
+AnalyzeThis is a pl/sql application that helps you in managing the cbo statistics for your database.
+It does this by allowing you to store the dbms_stats parameters into a table, enabling the use of default settings on different levels. 
+You can, for instance, spefify a set of parameters to be used for all partitions of a table and then make an exception for one speficif partition.
+
+AnalyzeThis keeps also track of the old cbo statistics in a history table (together with which parameters where being used to gather these statistics) 
+and keep track of the time it took to analyze an object.
+
+More information can be found at freekdhooge.wordpress.com/analyzethis
+
+Analyzethis is written by Freek D'Hooge (freek.dhooge@telenet.be) and released under the gnu lesser general public license.
+Which means you not only can use it free of charge, but also use it in proprietary programs.
+See the copying.txt and the copying.lesser.txt files for the full license details or browse to http://www.gnu.org/licenses/licenses.html.

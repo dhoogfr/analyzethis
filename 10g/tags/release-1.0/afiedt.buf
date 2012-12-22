@@ -1,0 +1,5 @@
+begin
+analyzethis.analyzethis.gatherobjstats
+( 'TABLE', 'SYSADM', 'DEMLIG', NULL, NULL, TRUE);
+end;
+/

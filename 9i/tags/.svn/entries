@@ -1,0 +1,34 @@
+8
+
+dir
+20
+svn://10.0.12.66/svn/AnalyzeThis/9i/tags
+svn://10.0.12.66/svn/AnalyzeThis/9i
+
+
+
+2008-07-20T22:42:54.881248Z
+20
+dhoogfr
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+eafadab0-56a5-4a65-926a-fe221dc33820
+
+release-1.0C1
+dir
+
+release-1.0
+dir
+

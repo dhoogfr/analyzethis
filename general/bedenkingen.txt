@@ -1,0 +1,95 @@
+BACKUP FUNCTIONALITEIT
+----------------------
+Optie voorzien om full backup te nemen ipv enkel een backup van de statistieken
+die veranderen. Deze optie moet kunnen gekozen worden bij het aanroepen van de
+statistieken berekening en beschikbaar zijn als een afzonderlijke public functie.
+
+Moet daarnaast nog altijd een afzondelijke backup genomen worden van gewijzigde statistieken?
+
+Eerste zicht ja. Backup is immers van de statistieken na herberekening --> samen met parameters.
+Backup job moet dan ook een afzonderlijke log entry krijgen.
+
+Wat bij expliciete herberekening van 1 afzonderlijk onderdeel (table, partition, index)?
+--> Geen afzonderlijke full backup, "incremental is hier voldoende"
+Misschien toch wel. De normale backup is immers een post backup.
+
+Ook bij schema level aanroep volledige db backuppen of enkel van dat schema?
+Misschien beter enkel van dat schema.
+
+==> Backup aanroep misschien in gatherstats zelf plaatsen.
+    dit betekent dan wel dat het steeds gaat om een schema level backup
+    ==> probleem is dan wel van welk schema?
+        bij gatherstats kan het perfect zijn dat er objecten worden doorgegeven van verschillende schema's!!!
+        ==> laten vallen dus
+
+SCHEMA / DATABASE LEVEL BIJ BEREKENING
+--------------------------------------
+
+Oppassen voor te veel duplicatie van code.
+Database level misschien hercoderen als loop van schema's ipv op "list statistics" niveau
+de granualiteit aan te passen ?
+Indien ja, is dit telkens een nieuwe statistics run? Mogelijk voordeel bij plotten van duurtijd?
+
+
+16/08/2006 --> mogelijk kan dit opgelost worden door het gebruik van reference cursors.
+               Hierdoor kan een schema level run gewoon de query opstellen en doorgeven 
+               aan de "generieke" procedure.
+               Kan ook gebruikt worden bij het berekenen van specifieke objecten door het 
+               gebruik van dual om een query te simuleren
+               
+
+Nadeel bij vaststellen prioriteit (oudste statistieken eerst herberekenen)
+==> nu reeds mogelijk probleem bij berekening indexes --> gebeurt nu steeds na berekening tabellen 
+tenzij bij de stats opties cascade true is.
+==> mogelijke oplossing hiervoor is de splitsing tussen tabellen/indexes af te schaffen en
+gewoon te controleren op last_analyzed voordat er effectief berekend wordt. Op deze manier is
+het mogelijk om te controleren of een index reeds niet berekend werd door een cascade optie
+(geeft ook de mogelijkheid om dubbele berekening bij  partitions/subpartitions uit te sluiten)
+Maar wat bij het geval dat eerst de index/partition/subpartition en dan pas de table in de lijst 
+voorkomt?
+Het gevaar bestaat ook dat de parameters die gebruikt worden bij het herberekenen van de statistieken
+afhankelijk zijn van de volgorde. Als bv een index eerst voorkomt op de lijst en er bestaan
+specifieke parameters voor die index dan worden die genomen. Als echter de tabel waarop die
+index staat eerst komt en de cascade optie van die tabel staat op true, dan worden er andere
+parameters genomen.
+HOE DOET ORACLE DAT ZELF ???? 
+
+
+WHICH STATS OPTIONS
+-------------------
+
+Functie nodig om te simuleren welke opties er zullen gebruikt worden voor een bepaald
+object. Op deze manier kunnen de instellingen gecontroleerd worden voor gebruik.
+Hoe programmeren? Als een functie of als een view?
+Kan het als een view gemaakt worden? Indien niet waarschijnlijk best als een pipelined
+function, dan kan daarna daarop eventueel een view gemaakt worden.
+
+DEBUGGING
+---------
+
+Dringend debugging voorzien. Gebruik maken van de vroegere debug package.
+Moet mogelijk zijn om met een debug trace en een dump van de statsoptions
+tabellen alles te debuggen (te verklaren waarom bepaalde opties gekozen zijn en te controleren
+of er geen fout zat bij het selecteren van die opties + timings per functie).
+
+
+TEMPORARY TABLES
+----------------
+
+Zijn typisch geen tabellen waarvoor je steeds statistieken wilt berekenen.
+Momenteel is er geen parameter om deze uit te filteren.
+Wel is het mogelijk om ze in de statoptions table op te nemen met het veld analyze op 'FALSE'.
+Ook is het mogelijk om een afzonderlijke procedure procedure aan te maken waarin ref cursors aan de gatherstats
+procedure worden doorgegeven. In de sql voor deze ref cursors kan dan de temporary en/of external tables worden weggefilterd.
+Deze package zou dan ook kunnen gebruikt worden als voorbeeld van hoe de gatherstats procedure kan gebruikt worden.
+
+"LOCKED" OBJECTS
+----------------
+
+Bij tables waarvoor de analyze optie op "FALSE" staat, mogen er ook geen statistieken berekend worden op de onderliggende indexes.
+Een extra check is nodig om dit te controleren.
+
+PurgeHistory
+------------
+
+Ook deleten van statistics_history 

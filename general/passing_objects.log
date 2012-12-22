@@ -1,0 +1,50 @@
+create or replace procedure p_test1
+IS
+
+l_test   test%rowtype;
+BEGIN
+select *
+into l_test
+from test
+where rownum = 1;
+p_test2(l_test);
+END;
+/
+
+create or replace procedure p_test2
+    ( p_input    IN     p_package.t
+    )
+IS
+BEGIN
+dbms_output.put_line (p_input.veld1);
+END;
+/
+
+create or replace package p_package
+IS
+
+type t is record
+( veld1     number(10,2),
+  veld2     varchar2(30)
+);
+
+end p_package;
+/
+
+create or replace procedure p_test1
+IS
+
+    l_veld1   test.veld1%type;
+    l_veld2   test.veld2%type;
+
+BEGIN
+
+    select *
+    into l_veld1, l_veld2
+    from test
+    where rownum = 1;
+    
+    p_test2(cast (l_veld1, l_veld2) as p_package.t);
+    
+END;
+/

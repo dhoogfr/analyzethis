@@ -1,0 +1,1 @@
+Note:333966.1 - Ora-20000: Unable To Analyze Table From Dbms_stats.Gather_table_stats Ora-20000

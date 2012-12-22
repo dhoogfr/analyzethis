@@ -1,0 +1,1062 @@
+070205 235606 (ANALYZEDEMO.ANALYZETHIS            , 2208) Initializing g_owner
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            , 2210) g_owner is set to: ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  856) Begin of procedure GatherSchemaStats
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  857)   input parameters p_schema: ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  858)   input parameters p_backup: TRUE
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  859)   input parameters p_option: AUTO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  861) Check if p_backup is true
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  864) Calling procedure BackupSchemaStats
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  865) passing p_schema: ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  657) Begin of procedure BackupSchemaStats
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  658)   input parameter p_schema: ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  663) Calling function GenNewID
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  931) Begin of function GetNewID
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  934) get a new id from seq_statid
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  938) retrieved statid 3
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  943) add a character to the statid
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  946) End of function GetNewID
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  947)   Returning l_statid: A3
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  665) Finished calling GenNewID
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  666) retrieved statid A3
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  669) calling procedure logStartRun
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  670)   p_statid: A3
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  671)   p_starttime: 05/02/2007 23:56;07
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  672)   l_log_msg: BACKUP SCHEMA STATS - ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  673)   p_schema: ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  554) Begin of procedure logStartRun
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  555)   input parameter p_statid: A3
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  556)   input parameter p_starttime: 05/02/2007 23:56:07
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  557)   input parameter p_operation: BACKUP SCHEMA STATS - ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  559) inserting new record in run_history
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  563) inserted 1 records
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  565) committing insert
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  568) End of procedure logStartRun
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  683) Calling procedure dbms_stats.export_schema_stats
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  684)   ownname: ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  685)   statown: ANALYZEDEMO
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  686)   stattab: STATISTICS_HISTORY
+070205 235607 (ANALYZEDEMO.ANALYZETHIS            ,  687)   statid:  A3
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  694) Finished calling procedure dbms_stats.export_schema_stats
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  719) Calling procedure logEndRun
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  720)  p_statid: A3
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  721)  p_endtime; 05/02/2007 23:56:08
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  722)  p_calcfailures: 0
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  723)  p_expfailures: 0
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  603) Begin of procedure logEndRun
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  604)   input parameter p_statid: A3
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  605)   input parameter p_endtime 05/02/2007 23:56:08
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  606)   input parameter p_calcfailures: 0
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  607)   input parameter p_expfailures: 0
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  610) updating run_history
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  616) updated 1 records
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  618) committing update
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  621) End of procedure logEndRun
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  730) Finished calling procedure logEndRun
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  732) End of procedure BackupSchemaStats
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  869) Finished calling procedure BackupSchemaStats
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  876) Open the l_obj_cursor ref cursor
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  883) Calling procedure GatherStats
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1065) Begin of procedure GatherStats
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1068) Calling function GenNewID
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  931) Begin of function GetNewID
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  934) get a new id from seq_statid
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  938) retrieved statid 4
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  943) add a character to the statid
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  946) End of function GetNewID
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  947)   Returning l_statid: A4
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1070) Finished calling GenNewID
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1071) retrieved statid A4
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1074) initializing variables
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1080) Calling inline procedure checkCursor
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1002) Begin of inline procedure checkCursor
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1004) Check if the p_obj_cursor is open
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1011) End of inline procedure checkCursor
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1082) Finished calling inline procedure checkCursor
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1085) calling procedure logStartRun
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1086)   p_statid: A4
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1087)   p_starttime: 05/02/2007 23:56:08
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1088)   p_operation: GATHER SCHEMA STATS - ANALYZEDEMO
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  554) Begin of procedure logStartRun
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  555)   input parameter p_statid: A4
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  556)   input parameter p_starttime: 05/02/2007 23:56:08
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  557)   input parameter p_operation: GATHER SCHEMA STATS - ANALYZEDEMO
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  559) inserting new record in run_history
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  563) inserted 1 records
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  565) committing insert
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  568) End of procedure logStartRun
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            , 1096) Start looping through the objects in the p_obj_cursor
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  191) Begin of pipelined function NeedStatsList
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  192)   input parameter p_schema: ANALYZEDEMO
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  193)   input parameter p_option: ANALYZEDEMO
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  198) p_option: AUTO => l_option: LIST AUTO
+070205 235608 (ANALYZEDEMO.ANALYZETHIS            ,  213) Calling procedure dbms_stats.gather_schema_stats to retrieve the objects with empty or stale stats
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  222) Finished calling procedure dbms_stats
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  225) if l_need_stats.count: 11 > 0
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  228) loop through the retrieved records
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 1
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 2
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 3
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 4
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 5
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 6
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 7
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 8
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 9
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 10
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  231) Pipe row number 11
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  234) Finished looping through the retrieved records
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            ,  237) End of pipelined function NeedStatsList
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: TABLE
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: DEBUGTAB
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: TABLE
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: DEBUGTAB
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  163) Begin of inline procedure setTabDate
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  169) End of inline procedure setTabDate
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 
+070205 235609 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1050) l_startdate > l_last_analyzed or l_last_analyzed is null, object has not yet been analyzed during this run
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: FALSE
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1107) Object has not yet been analyzed during this run
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1108) Calling procedure GatherIt
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1109)   p_statid: A4
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1110)   l_stardate: 05-FEB-07
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1111)   p_ownname: ANALYZEDEMO
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1112)   p_objtype: TABLE
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1113)   p_objname: DEBUGTAB
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1114)   p_partname: 
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1115)   p_subpartname: 
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1116)   l_calcfailures: 0
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1117)   l_expfailures: 0
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1592) Begin of procedure GatherIt
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1593)   input parameter p_statid: A4
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1594)   input parameter p_ownname: ANALYZEDEMO
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1595)   input parameter p_objtype: TABLE
+070205 235609 (ANALYZEDEMO.ANALYZETHIS            , 1596)   input parameter p_objname: DEBUGTAB
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1597)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1598)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1599)   input parameter p_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1600)   input parameter p_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1603) Calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1557) Begin of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1559) Calling function GetStatOptions, passing values
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1560)   p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1561)   p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1562)   p_objname: DEBUGTAB
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1563)   p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1564)   p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  486) Begin of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  487)   input parameter p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  488)   input parameter p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  489)   input parameter p_objname: DEBUGTAB
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  490)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  491)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  504) Calling inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  423) Begin of inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  449) Exception; no_data_found
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  450) Calling procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  467) Begin of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  480) End of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  452) Finished procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  506) Finished inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  509) Returning l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  510)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  511)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  512)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  513)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  514)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  515)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  516)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  517)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  518)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  519)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  520) End of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1572) Finished calling function getStatOptions, retrieving l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1573)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1574)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1575)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1576)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1577)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1578)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1579)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1580)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1581)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1582)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1584) End of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1605) Finished calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1609) Calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1486) Begin of inline procedure LogStart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1488) inserting a new record in run_history_details
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1506) inserted 1 records
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1507) committing insert
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1510) End of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1611) Finished calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1614) check if the object is not excluded by the user
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1200) Begin of procedure isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1201)   input param p_obj_owner: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1202)   input param p_obj_type: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1203)   input param p_obj_name: DEBUGTAB
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1204)   input param p_obj_part_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1205)   input param p_obj_subpart_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1206)   input param p_obj_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1211) If p_obj_locked: FALSE = 'TRUE'
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1278) End of function isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1279)   Returning l_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1625) Object is not excluded, gathering the statistics
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1628) Calling procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1404) Begin of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1406) check p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1407) If TABLE then
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1410) Calling procedure dbms_stats.gather_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1445) Finished calling procedure dbms_stats.gather_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1474) End of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1630) Finished calling procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1641) check if calcstats finished without errors
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1644) Ok, start with the post backup operation
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1647) Calling procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1343) Begin of inline procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1345) check p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1346) if table then
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1349) export the table statistics
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1356) calling procedure dbms_stats.export_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1357)   ownname:  ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1358)   tabname:  DEBUGTAB
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1359)   partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1360)   statown:  ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1361)   stattab:  STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1362)   statid:   A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1363)   cascade:  TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1392) End of inline procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1649) Finished calling procedure BackupPoststats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1665) Calling procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1522) Begin of inline procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1524) updating run_history_details, setting
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1525)   l_calc_status = VALID
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1526)   l_exp_status = VALID
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1541) updated 1 records
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1542) committing the update
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1545) End of inline procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1667) Finished calling procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1669) End of procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1128) Finished calling procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1129)   l_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1130)   l_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: RUN_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: TABLE
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: RUN_HISTORY
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  163) Begin of inline procedure setTabDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  169) End of inline procedure setTabDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1050) l_startdate > l_last_analyzed or l_last_analyzed is null, object has not yet been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1107) Object has not yet been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1108) Calling procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1109)   p_statid: A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1110)   l_stardate: 05-FEB-07
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1111)   p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1112)   p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1113)   p_objname: RUN_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1114)   p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1115)   p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1116)   l_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1117)   l_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1592) Begin of procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1593)   input parameter p_statid: A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1594)   input parameter p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1595)   input parameter p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1596)   input parameter p_objname: RUN_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1597)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1598)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1599)   input parameter p_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1600)   input parameter p_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1603) Calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1557) Begin of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1559) Calling function GetStatOptions, passing values
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1560)   p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1561)   p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1562)   p_objname: RUN_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1563)   p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1564)   p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  486) Begin of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  487)   input parameter p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  488)   input parameter p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  489)   input parameter p_objname: RUN_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  490)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  491)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  504) Calling inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  423) Begin of inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  449) Exception; no_data_found
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  450) Calling procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  467) Begin of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  480) End of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  452) Finished procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  506) Finished inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  509) Returning l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  510)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  511)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  512)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  513)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  514)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  515)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  516)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  517)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  518)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  519)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  520) End of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1572) Finished calling function getStatOptions, retrieving l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1573)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1574)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1575)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1576)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1577)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1578)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1579)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1580)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1581)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1582)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1584) End of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1605) Finished calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1609) Calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1486) Begin of inline procedure LogStart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1488) inserting a new record in run_history_details
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1506) inserted 1 records
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1507) committing insert
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1510) End of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1611) Finished calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1614) check if the object is not excluded by the user
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1200) Begin of procedure isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1201)   input param p_obj_owner: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1202)   input param p_obj_type: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1203)   input param p_obj_name: RUN_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1204)   input param p_obj_part_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1205)   input param p_obj_subpart_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1206)   input param p_obj_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1211) If p_obj_locked: FALSE = 'TRUE'
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1278) End of function isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1279)   Returning l_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1625) Object is not excluded, gathering the statistics
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1628) Calling procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1404) Begin of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1406) check p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1407) If TABLE then
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1410) Calling procedure dbms_stats.gather_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1445) Finished calling procedure dbms_stats.gather_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1474) End of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1630) Finished calling procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1641) check if calcstats finished without errors
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1644) Ok, start with the post backup operation
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1647) Calling procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1343) Begin of inline procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1345) check p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1346) if table then
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1349) export the table statistics
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1356) calling procedure dbms_stats.export_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1357)   ownname:  ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1358)   tabname:  RUN_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1359)   partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1360)   statown:  ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1361)   stattab:  STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1362)   statid:   A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1363)   cascade:  TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1392) End of inline procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1649) Finished calling procedure BackupPoststats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1665) Calling procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1522) Begin of inline procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1524) updating run_history_details, setting
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1525)   l_calc_status = VALID
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1526)   l_exp_status = VALID
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1541) updated 1 records
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1542) committing the update
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1545) End of inline procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1667) Finished calling procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1669) End of procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1128) Finished calling procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1129)   l_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1130)   l_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: TABLE
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  163) Begin of inline procedure setTabDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  169) End of inline procedure setTabDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1050) l_startdate > l_last_analyzed or l_last_analyzed is null, object has not yet been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1107) Object has not yet been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1108) Calling procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1109)   p_statid: A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1110)   l_stardate: 05-FEB-07
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1111)   p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1112)   p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1113)   p_objname: RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1114)   p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1115)   p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1116)   l_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1117)   l_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1592) Begin of procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1593)   input parameter p_statid: A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1594)   input parameter p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1595)   input parameter p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1596)   input parameter p_objname: RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1597)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1598)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1599)   input parameter p_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1600)   input parameter p_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1603) Calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1557) Begin of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1559) Calling function GetStatOptions, passing values
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1560)   p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1561)   p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1562)   p_objname: RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1563)   p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1564)   p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  486) Begin of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  487)   input parameter p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  488)   input parameter p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  489)   input parameter p_objname: RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  490)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  491)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  504) Calling inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  423) Begin of inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  449) Exception; no_data_found
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  450) Calling procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  467) Begin of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  480) End of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  452) Finished procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  506) Finished inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  509) Returning l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  510)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  511)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  512)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  513)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  514)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  515)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  516)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  517)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  518)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  519)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  520) End of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1572) Finished calling function getStatOptions, retrieving l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1573)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1574)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1575)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1576)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1577)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1578)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1579)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1580)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1581)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1582)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1584) End of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1605) Finished calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1609) Calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1486) Begin of inline procedure LogStart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1488) inserting a new record in run_history_details
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1506) inserted 1 records
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1507) committing insert
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1510) End of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1611) Finished calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1614) check if the object is not excluded by the user
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1200) Begin of procedure isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1201)   input param p_obj_owner: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1202)   input param p_obj_type: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1203)   input param p_obj_name: RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1204)   input param p_obj_part_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1205)   input param p_obj_subpart_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1206)   input param p_obj_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1211) If p_obj_locked: FALSE = 'TRUE'
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1278) End of function isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1279)   Returning l_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1625) Object is not excluded, gathering the statistics
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1628) Calling procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1404) Begin of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1406) check p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1407) If TABLE then
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1410) Calling procedure dbms_stats.gather_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1445) Finished calling procedure dbms_stats.gather_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1474) End of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1630) Finished calling procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1641) check if calcstats finished without errors
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1644) Ok, start with the post backup operation
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1647) Calling procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1343) Begin of inline procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1345) check p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1346) if table then
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1349) export the table statistics
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1356) calling procedure dbms_stats.export_table_stats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1357)   ownname:  ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1358)   tabname:  RUN_HISTORY_DETAILS
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1359)   partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1360)   statown:  ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1361)   stattab:  STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1362)   statid:   A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1363)   cascade:  TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1392) End of inline procedure BackupPostStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1649) Finished calling procedure BackupPoststats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1665) Calling procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1522) Begin of inline procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1524) updating run_history_details, setting
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1525)   l_calc_status = VALID
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1526)   l_exp_status = VALID
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1541) updated 1 records
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1542) committing the update
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1545) End of inline procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1667) Finished calling procedure LogStop
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1669) End of procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1128) Finished calling procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1129)   l_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1130)   l_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: TABLE
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  163) Begin of inline procedure setTabDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  169) End of inline procedure setTabDate
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 
+070205 235610 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1050) l_startdate > l_last_analyzed or l_last_analyzed is null, object has not yet been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1107) Object has not yet been analyzed during this run
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1108) Calling procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1109)   p_statid: A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1110)   l_stardate: 05-FEB-07
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1111)   p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1112)   p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1113)   p_objname: STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1114)   p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1115)   p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1116)   l_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1117)   l_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1592) Begin of procedure GatherIt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1593)   input parameter p_statid: A4
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1594)   input parameter p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1595)   input parameter p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1596)   input parameter p_objname: STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1597)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1598)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1599)   input parameter p_calcfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1600)   input parameter p_expfailures: 0
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1603) Calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1557) Begin of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1559) Calling function GetStatOptions, passing values
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1560)   p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1561)   p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1562)   p_objname: STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1563)   p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1564)   p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  486) Begin of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  487)   input parameter p_ownname: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  488)   input parameter p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  489)   input parameter p_objname: STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  490)   input parameter p_partname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  491)   input parameter p_subpartname: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  504) Calling inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  423) Begin of inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  449) Exception; no_data_found
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  450) Calling procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  467) Begin of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  480) End of inline procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  452) Finished procedure SetDefaultOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  506) Finished inline procedure GetOpt
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  509) Returning l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  510)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  511)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  512)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  513)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  514)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  515)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  516)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  517)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  518)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  519)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            ,  520) End of function GetStatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1572) Finished calling function getStatOptions, retrieving l_StatOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1573)   l_StatOptions.locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1574)   l_StatOptions.auto_sample_size: TRUE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1575)   l_StatOptions.estimate_percent: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1576)   l_StatOptions.block_sample: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1577)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1578)   l_StatOptions.default_degree: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1579)   l_StatOptions.degree: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1580)   l_StatOptions.granularity: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1581)   l_StatOptions.cascade: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1582)   l_StatOptions.no_invalidate: AUTO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1584) End of inline procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1605) Finished calling procedure GetOptions
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1609) Calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1486) Begin of inline procedure LogStart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1488) inserting a new record in run_history_details
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1506) inserted 1 records
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1507) committing insert
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1510) End of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1611) Finished calling procedure Logstart
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1614) check if the object is not excluded by the user
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1200) Begin of procedure isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1201)   input param p_obj_owner: ANALYZEDEMO
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1202)   input param p_obj_type: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1203)   input param p_obj_name: STATISTICS_HISTORY
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1204)   input param p_obj_part_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1205)   input param p_obj_subpart_name: 
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1206)   input param p_obj_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1211) If p_obj_locked: FALSE = 'TRUE'
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1278) End of function isLocked
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1279)   Returning l_locked: FALSE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1625) Object is not excluded, gathering the statistics
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1628) Calling procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1404) Begin of inline procedure CalcStats
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1406) check p_objtype: TABLE
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1407) If TABLE then
+070205 235610 (ANALYZEDEMO.ANALYZETHIS            , 1410) Calling procedure dbms_stats.gather_table_stats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1445) Finished calling procedure dbms_stats.gather_table_stats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1474) End of inline procedure CalcStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1630) Finished calling procedure CalcStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1641) check if calcstats finished without errors
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1644) Ok, start with the post backup operation
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1647) Calling procedure BackupPostStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1343) Begin of inline procedure BackupPostStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1345) check p_objtype: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1346) if table then
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1349) export the table statistics
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1356) calling procedure dbms_stats.export_table_stats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1357)   ownname:  ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1358)   tabname:  STATISTICS_HISTORY
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1359)   partname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1360)   statown:  ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1361)   stattab:  STATISTICS_HISTORY
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1362)   statid:   A4
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1363)   cascade:  TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1392) End of inline procedure BackupPostStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1649) Finished calling procedure BackupPoststats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1665) Calling procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1522) Begin of inline procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1524) updating run_history_details, setting
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1525)   l_calc_status = VALID
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1526)   l_exp_status = VALID
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1541) updated 1 records
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1542) committing the update
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1545) End of inline procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1667) Finished calling procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1669) End of procedure GatherIt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1128) Finished calling procedure GatherIt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1129)   l_calcfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1130)   l_expfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: STATOPTIONS
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: TABLE
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: STATOPTIONS
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  163) Begin of inline procedure setTabDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  169) End of inline procedure setTabDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1050) l_startdate > l_last_analyzed or l_last_analyzed is null, object has not yet been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: FALSE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1107) Object has not yet been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1108) Calling procedure GatherIt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1109)   p_statid: A4
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1110)   l_stardate: 05-FEB-07
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1111)   p_ownname: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1112)   p_objtype: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1113)   p_objname: STATOPTIONS
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1114)   p_partname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1115)   p_subpartname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1116)   l_calcfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1117)   l_expfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1592) Begin of procedure GatherIt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1593)   input parameter p_statid: A4
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1594)   input parameter p_ownname: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1595)   input parameter p_objtype: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1596)   input parameter p_objname: STATOPTIONS
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1597)   input parameter p_partname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1598)   input parameter p_subpartname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1599)   input parameter p_calcfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1600)   input parameter p_expfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1603) Calling procedure GetOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1557) Begin of inline procedure GetOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1559) Calling function GetStatOptions, passing values
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1560)   p_ownname: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1561)   p_objtype: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1562)   p_objname: STATOPTIONS
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1563)   p_partname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1564)   p_subpartname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  486) Begin of function GetStatOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  487)   input parameter p_ownname: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  488)   input parameter p_objtype: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  489)   input parameter p_objname: STATOPTIONS
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  490)   input parameter p_partname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  491)   input parameter p_subpartname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  504) Calling inline procedure GetOpt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  423) Begin of inline procedure GetOpt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  449) Exception; no_data_found
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  450) Calling procedure SetDefaultOpt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  467) Begin of inline procedure SetDefaultOpt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  480) End of inline procedure SetDefaultOpt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  452) Finished procedure SetDefaultOpt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  506) Finished inline procedure GetOpt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  509) Returning l_StatOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  510)   l_StatOptions.locked: FALSE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  511)   l_StatOptions.auto_sample_size: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  512)   l_StatOptions.estimate_percent: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  513)   l_StatOptions.block_sample: FALSE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  514)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  515)   l_StatOptions.default_degree: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  516)   l_StatOptions.degree: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  517)   l_StatOptions.granularity: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  518)   l_StatOptions.cascade: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  519)   l_StatOptions.no_invalidate: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  520) End of function GetStatOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1572) Finished calling function getStatOptions, retrieving l_StatOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1573)   l_StatOptions.locked: FALSE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1574)   l_StatOptions.auto_sample_size: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1575)   l_StatOptions.estimate_percent: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1576)   l_StatOptions.block_sample: FALSE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1577)   l_StatOptions.method_opt: FOR ALL COLUMNS SIZE AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1578)   l_StatOptions.default_degree: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1579)   l_StatOptions.degree: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1580)   l_StatOptions.granularity: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1581)   l_StatOptions.cascade: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1582)   l_StatOptions.no_invalidate: AUTO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1584) End of inline procedure GetOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1605) Finished calling procedure GetOptions
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1609) Calling procedure Logstart
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1486) Begin of inline procedure LogStart
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1488) inserting a new record in run_history_details
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1506) inserted 1 records
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1507) committing insert
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1510) End of inline procedure CalcStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1611) Finished calling procedure Logstart
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1614) check if the object is not excluded by the user
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1200) Begin of procedure isLocked
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1201)   input param p_obj_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1202)   input param p_obj_type: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1203)   input param p_obj_name: STATOPTIONS
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1204)   input param p_obj_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1205)   input param p_obj_subpart_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1206)   input param p_obj_locked: FALSE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1211) If p_obj_locked: FALSE = 'TRUE'
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1278) End of function isLocked
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1279)   Returning l_locked: FALSE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1625) Object is not excluded, gathering the statistics
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1628) Calling procedure CalcStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1404) Begin of inline procedure CalcStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1406) check p_objtype: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1407) If TABLE then
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1410) Calling procedure dbms_stats.gather_table_stats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1445) Finished calling procedure dbms_stats.gather_table_stats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1474) End of inline procedure CalcStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1630) Finished calling procedure CalcStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1641) check if calcstats finished without errors
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1644) Ok, start with the post backup operation
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1647) Calling procedure BackupPostStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1343) Begin of inline procedure BackupPostStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1345) check p_objtype: TABLE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1346) if table then
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1349) export the table statistics
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1356) calling procedure dbms_stats.export_table_stats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1357)   ownname:  ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1358)   tabname:  STATOPTIONS
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1359)   partname: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1360)   statown:  ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1361)   stattab:  STATISTICS_HISTORY
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1362)   statid:   A4
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1363)   cascade:  TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1392) End of inline procedure BackupPostStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1649) Finished calling procedure BackupPoststats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1665) Calling procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1522) Begin of inline procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1524) updating run_history_details, setting
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1525)   l_calc_status = VALID
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1526)   l_exp_status = VALID
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1541) updated 1 records
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1542) committing the update
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1545) End of inline procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1667) Finished calling procedure LogStop
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1669) End of procedure GatherIt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1128) Finished calling procedure GatherIt
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1129)   l_calcfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1130)   l_expfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: RHD_PK
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: RHD_PK
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  217) Begin of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  223) End of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1047) l_startdate <= l_last_analyzed, object has already been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1132) Object already has been analyzed, skipping object
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: RHI_PK
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: RHI_PK
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  217) Begin of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  223) End of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1047) l_startdate <= l_last_analyzed, object has already been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1132) Object already has been analyzed, skipping object
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: RH_ENDTIME_I
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: RH_ENDTIME_I
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  217) Begin of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  223) End of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1047) l_startdate <= l_last_analyzed, object has already been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1132) Object already has been analyzed, skipping object
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: STATISTICS_HISTORY
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: STATISTICS_HISTORY
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  217) Begin of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  223) End of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1047) l_startdate <= l_last_analyzed, object has already been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1132) Object already has been analyzed, skipping object
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: STA_PK
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: STA_PK
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  217) Begin of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  223) End of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1047) l_startdate <= l_last_analyzed, object has already been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1132) Object already has been analyzed, skipping object
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1104) check if the object already has been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1026) Begin of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1028) Calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1029)   input parameter p_owner: ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1030)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1031)   input parameter p_object_name: SYS_C005122
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1032)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1033)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  270) Begin of function getDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  271)   input parameter p_owner ANALYZEDEMO
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  272)   input parameter p_object_type: INDEX
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  273)   input parameter p_object_name: SYS_C005122
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  274)   input parameter p_part_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  275)   input parameter p_subpart_name: 
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  277) Check input parameter
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  234) Begin of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  262) End of inline procedure checkInput
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  280) retrieve last_analyzed_date
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  217) Begin of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  223) End of inline procedure setIndDate
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  309) Returning l_lastAnalyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.GETLASTANALYZEDDATE    ,  310) End of function getDate
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1041) Finished calling function getLastAnalyzedDate.get_date
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1042) Retrieved l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1044) Comparing l_startdate: 05/02/2007 23:56:08, with l_last_analyzed: 05/02/2007 23:56:10
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1047) l_startdate <= l_last_analyzed, object has already been analyzed during this run
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1054) Returning l_result: TRUE
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1055) End of inline procedure AlreadyAnalyzed
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1132) Object already has been analyzed, skipping object
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1136) Finished looping through the objects in the p_obj_cursor
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1139) Calling procedure logEndRun
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1140)  p_statid: A4
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1141)  p_endtime; 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1142)  p_calcfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1143)  p_expfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  603) Begin of procedure logEndRun
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  604)   input parameter p_statid: A4
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  605)   input parameter p_endtime 05/02/2007 23:56:11
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  606)   input parameter p_calcfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  607)   input parameter p_expfailures: 0
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  610) updating run_history
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  616) updated 1 records
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  618) committing update
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  621) End of procedure logEndRun
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1150) Finished calling procedure logEndRun
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            , 1152) End of procedure GatherStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  888) Finished calling procedure GatherStats
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  890) Closing reference cursor l_obj_cursor
+070205 235611 (ANALYZEDEMO.ANALYZETHIS            ,  896) End of procedure GatherSchemaStats
